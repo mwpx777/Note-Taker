@@ -1,9 +1,11 @@
 // dependencies
 const express = require('express');
-const fs = require('fs');
 const PORT = process.env.PORT || 3001;
 const app = express();
-const notes = require('./Develop/db/db');
+const fs = require('fs');
+const path = require('path');
+const { notes } = require('./Develop/db/db.json')
+
 
 
 // Middleware
@@ -17,28 +19,45 @@ app.get('/api/notes', (req, res) => {
     res.json(notes);
     // res.send("notes endpoint working")
     // res.sendFile(path.join(__dirname, './Develop/db/db'))
-    
+
 });
+
+function createNewNote(body, notesArray) {
+    const note = body;
+    notes.push(note);
+    fs.writeFileSync(
+        path.join(__dirname, './Develop/db/db.json'),
+        JSON.stringify({ notes: notesArray }, null, 2)
+    );
+    // console.log(body);
+    return note;
+}
 
 // add new notes to db.json
 app.post('/api/notes', (req, res) => {
+    req.body.id = notes.length.toString();
 
-    const note = JSON.parse(fs.readFileSync('./Develop/db/db'));
-    const newNote = require.body;
-    newNote.id =
-        noteListItems.push(newNote);
-    fs.writeFileSync(
-        path.join(__dirname, '..Develop/db/db.json'),
-        JSON.stringify({ noteListItems }, null, 2)
-    );
+    // console.log(req.body);
+    const newNote = createNewNote(req.body, notes);
+    // res.json(req.body)
+    res.json(newNote);
+
 
 });
+// this displays index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './Develop/public/index.html'));
 
+});
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, './Develop/public/notes.html'));
+
+});
 
 // delete note from db
-app.delete('/api/notes/:id', (req, res) => {
+// app.delete('/api/notes/:id', (req, res) => {
 
-});
+// });
 
 // port listener
 app.listen(PORT, () => {

@@ -1,35 +1,14 @@
 {
   "notes": [
     {
-      "note Title": "Mark",
-      "note text": "Mark the Monkey",
-      "id": "5"
+      "title": "New Note 1",
+      "text": "note q2",
+      "id": "0"
     },
     {
-      "name": "Larry",
-      "species": "lemur",
-      "diet": "omnivore",
-      "personalityTraits": [
-        "hungry"
-      ]
-    },
-    {
-      "name": "Jeff",
-      "species": "Tiger",
-      "diet": "omnivore",
-      "personalityTraits": [
-        "hungry"
-      ],
-      "id": "2"
-    },
-    {
-      "name": "lyle",
-      "species": "crocodile",
-      "diet": "omnivore",
-      "personalityTraits": [
-        "hungry"
-      ],
-      "id": "3"
+      "title": "New note 2",
+      "text": "new note",
+      "id": "1"
     }
   ]
 }

@@ -9,8 +9,6 @@
 
 * [Screenshot](#screenshot)
 
-* [Installation](#installation)
-
 * [Features](#features)
 
 * [Usage](#usage)
@@ -29,8 +27,7 @@ https://note-taker-mwp.herokuapp.com/
 ## **Screenshot**
 ![screenshot](assets/images/screenshot.png)
 
-## **Installation**
-undefined
+
 
 ## **Features**
 This application features Node.js and Express.js.  This also utilizes the NPM UUID for creating randomly generated id numbers for each note created.

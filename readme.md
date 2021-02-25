@@ -15,15 +15,11 @@
 
 * [Usage](#usage)
 
-* [Credits](#credits)
-
 * [License](#license)
 
 * [Badges](#badges)
 
 * [Technology](#technology)
-
-* [Acknowledgements](#acknowledgements)
 
 * [Contact](#contact-information)
 
@@ -42,8 +38,6 @@ This application features Node.js and Express.js.  This also utilizes the NPM UU
 ## **Usage**
 This application can be used to enter, edit and delete user notes or tasks.
 
-## **Credits**
-undefined
 
 
 ## **License**
@@ -59,10 +53,7 @@ undefined
 ## **Technology**
 HTML,CSS,Javascript,jQuery,Bootstrap,Node.js
 
-## **Acknowledgements**
-undefined
 
-## **Tests**
 
 
 ## **Contact Information**

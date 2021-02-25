@@ -22,16 +22,6 @@ app.get('/api/notes', (req, res) => {
 
 });
 
-// function to create new note
-// function createNewNote(body, notesArray) {
-//     const note = body;
-//     notes.push(note);
-//     fs.writeFileSync(
-//         path.join(__dirname, './Develop/db/db.json'),
-//         JSON.stringify({ notes: notesArray }, null, 2)
-//     );
-//     return note;
-// };
 
 // post to notes array
 app.post('/api/notes', (req, res) => {
@@ -60,26 +50,6 @@ app.delete('/api/notes/:id', (req, res) => {
     res.json(removeNote);
 
 });
-
-// add new notes to db.json
-// app.post('/api/notes', (req, res) => {
-//     // creates new id number based on array length
-//     req.body.id = notes.length.toString();
-//     const newNote = createNewNote(req.body, notes);
-//     res.json(newNote);
-// });
-
-
-
-// app.post('/api/notes', (req, res) => {
-//     const notes = JSON.parse(fs.readFileSync('./Develop/db/db.json'));
-//     const newNotes = req.body;
-//     newNotes.id = uuid.v4();
-//     notes.push(newNotes);
-//     fs.writeFileSync('./Develop/db/db.json');
-//     res.json(notes);
-// })
-
 
 
 // display notes.html
